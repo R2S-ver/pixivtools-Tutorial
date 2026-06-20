@@ -23,12 +23,12 @@
 - 下载(Git Bash)[https://git-scm.com/install/](选择操作版本)
 - 下载(Python)[https://www.python.org/downloads/](选择下载版本，适合自己的操作系统，然后运行安装程序.msix文件)
 如果后面的操作不成功，报错无法找到python，就问deepseek检查一下是不是path没配置
-### 1、安装pixivtools
+### 2、安装pixivtools
 ```shell
 pip install pixivtools --upgrade
 ```
 
-### 2、创建配置对象
+### 3、创建配置对象
 
 这里有两种办法可以完成配置的设置，可根据喜好选择
 
@@ -48,11 +48,11 @@ cfg = cfg_maker()
 
 #### 2) 通过配置文件
 创建一个`config.yaml`文件，配置示例参见仓库的`config.yaml.example`
-
+在config.yaml里面有phpsessid(你的P站ID）；获取方式为：登录Pixiv，在首页按F12，选择`网络`，按Ctrl+F搜索`phpsessid`，寻找phpsessid后面跟着一大串代码直到;符号中止，这个就是phpsessid，找不到问ai。
 然后 `cfg = pixivtools.load_pixiv_config("config.yaml")`
 
 
-### 3. 开始操作
+### 4. 开始操作
 ```python
 # 将上一步得到的cfg对象，传到这里
 service = pixivtools.new_pixiv_service(cfg)
