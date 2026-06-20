@@ -86,15 +86,15 @@ crawler.get_by_request_creator()
 import threading
 
 # 你要下载的画师 ID 列表（无重复）
-USER_IDS = [爬去画师的ID，ID为画师网址的尾部数字] #参考代码 USER_IDS = [67921731, 30370756, 105818043]
+USER_IDS = [爬去画师的ID，ID为画师网址的尾部数字]                 # 参考代码 USER_IDS = [67921731, 30370756, 105818043]
 
 def download_user(uid):
     # 使用构造器创建独立的配置，完全不需要 YAML 文件
     cfg_maker = pixivtools.pixiv_config_maker()
     
     # 这里直接写你的登录信息和代理（和 config.yaml 里一样）
-    cfg_maker.set_phpsessid("你的P站ID")   # 修改为真实值
-    cfg_maker.set_proxy("")                      	       # 如果没有代理可注释掉这一行
+    cfg_maker.set_phpsessid("你的P站ID")                        # 修改为你的P站ID
+    cfg_maker.set_proxy("")                      	           # 如果没有代理可注释掉这一行
     cfg_maker.set_img_dir(f"./imgs_{uid}")                     # 每个画师独立文件夹
     cfg_maker.set_sql_url(f"sqlite:///pixiv_{uid}.db")         # 独立数据库
     cfg_maker.set_log_file(f"./out_{uid}.log")                 # 独立日志（可选）
@@ -124,3 +124,10 @@ for t in threads:
 print("全部任务结束！")
 input("按回车键退出...")
 ```
+#### 2) 创建一个Run.bat文件
+里面输入以下代码
+```@echo off
+python run.py
+pause
+```
+#### 3) 在Run.py文件里修改/新增你想下载的画师id, 然后双击Run.bat文件。完成上面所有部署后，以后每次下载只需要执行这一步
