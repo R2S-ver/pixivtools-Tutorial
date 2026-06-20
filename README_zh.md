@@ -19,8 +19,7 @@
 * 按照接稿的最新接稿画师下载图片
 
 ## 使用方法
-### 1、部署运行环境
-已经有可以跳过
+### 1、部署运行环境(已经有可以跳过)
 - 下载(Git Bash)[https://git-scm.com/install/](选择操作版本)
 - 下载(Python)[https://www.python.org/downloads/](选择下载版本，适合自己的操作系统，然后运行安装程序.msix文件)
 如果后面的操作不成功，报错无法找到python，就问deepseek检查一下是不是path没配置
