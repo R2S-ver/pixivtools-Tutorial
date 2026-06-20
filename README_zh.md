@@ -72,6 +72,7 @@ crawler.get_by_similar_artwork(115812789)
 crawler.get_by_similar_user(20015785)
 crawler.get_by_recommend_user()
 crawler.get_by_request_creator()
+```
 
 ### 5. 爬取完成后，图片会保存到指定路径，数据库会记录所有相关的元信息，可根据自行需求食用
 
