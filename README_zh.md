@@ -81,8 +81,7 @@ crawler.get_by_request_creator()
 个人用的方式:
 #### 1) 在放config.yaml的文件夹下新建文件，名字改成Run.py
 里面输入以下代码，记得修改为自己的SESSIED; 没有代理服务器时cfg_maker.set_proxy("")留空; 
-```
-import pixivtools
+```import pixivtools
 import threading
 
 # 你要下载的画师 ID 列表（无重复）
